@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <button style="cursor: pointer;" id="refresh-todo-list" type="button" class="btn btn-primary">
+        Refresh List
+    </button>
+
+    <hr>
+
+    <table class="table table-inverse">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="todo-list-table"></tbody>
+    </table>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="new-todo"
+               placeholder="Create new TODO">
+    </div>
+
+    <button id="create-new-todo" type="button" class="btn btn-success login-button">
+        Create new +
+    </button>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='api.js') }}"></script>
+    <script src="{{ url_for('static', filename='todo-list.js') }}"></script>
+
+{% endblock %}
