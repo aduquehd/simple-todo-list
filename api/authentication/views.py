@@ -10,7 +10,7 @@ def email_type(email):
     if not email:
         raise ValueError("The email is required")
     if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-        raise ValueError("The email is has not a valid format")
+        raise ValueError("The email has not a valid format")
 
     return email
 
